@@ -162,6 +162,7 @@ class PlanningProblem:
         if not list_action.check_precond(self.initial, args):
             raise Exception("Action '{}' pre-conditions not satisfied".format(action))
         self.initial = list_action(self.initial, args).clauses
+        print(self.initial)
 
 
 class Action:
