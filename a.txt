@@ -1,0 +1,843 @@
+find_open_precondition
+element
+(plan_to_kill(Alex, Diana), Finish)
+
+element[0]
+plan_to_kill(Alex, Diana)
+
+possible_actions
+[Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+2
+[want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School)]
+
+return
+plan_to_kill(Alex, Diana) Finish [want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School)]
+find_open_precondition
+element
+(MarryWith(Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+MarryWith(Alex, Ann)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+element
+(Person(Ann), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Person(Ann)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+element
+(Person(Diana), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Person(Diana)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+element
+(Affair(Alex, Diana), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Affair(Alex, Diana)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[have_an_affair(Alex, Diana)]
+
+element
+(Person(Alex), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Person(Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+return
+MarryWith(Alex, Ann) want_to_reveal_affair_to(Alex, Diana, Ann) [Start]
+find_open_precondition
+element
+(Person(Ann), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Person(Ann)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+element
+(Person(Diana), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Person(Diana)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+element
+(Affair(Alex, Diana), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Affair(Alex, Diana)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[have_an_affair(Alex, Diana)]
+
+element
+(Person(Alex), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Person(Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+return
+Person(Ann) want_to_reveal_affair_to(Alex, Diana, Ann) [Start]
+find_open_precondition
+element
+(Person(Diana), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Person(Diana)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+element
+(Affair(Alex, Diana), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Affair(Alex, Diana)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[have_an_affair(Alex, Diana)]
+
+element
+(Person(Alex), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Person(Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+return
+Person(Diana) want_to_reveal_affair_to(Alex, Diana, Ann) [Start]
+find_open_precondition
+element
+(Affair(Alex, Diana), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Affair(Alex, Diana)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[have_an_affair(Alex, Diana)]
+
+element
+(Person(Alex), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Person(Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+return
+Affair(Alex, Diana) want_to_reveal_affair_to(Alex, Diana, Ann) [have_an_affair(Alex, Diana)]
+find_open_precondition
+element
+(Person(Alex), have_an_affair(Alex, Diana))
+
+element[0]
+Person(Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+element
+(Person(Diana), have_an_affair(Alex, Diana))
+
+element[0]
+Person(Diana)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+element
+(Love(Diana, Alex), have_an_affair(Alex, Diana))
+
+element[0]
+Love(Diana, Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+4
+[fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+
+element
+(Love(Alex, Diana), have_an_affair(Alex, Diana))
+
+element[0]
+Love(Alex, Diana)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+4
+[fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+
+element
+(Person(Alex), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Person(Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+2
+[Start, Start]
+
+element
+(Married(Alex), have_an_affair(Alex, Diana))
+
+element[0]
+Married(Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+return
+Person(Diana) have_an_affair(Alex, Diana) [Start]
+find_open_precondition
+element
+(Person(Alex), have_an_affair(Alex, Diana))
+
+element[0]
+Person(Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+element
+(Love(Diana, Alex), have_an_affair(Alex, Diana))
+
+element[0]
+Love(Diana, Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+4
+[fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+
+element
+(Love(Alex, Diana), have_an_affair(Alex, Diana))
+
+element[0]
+Love(Alex, Diana)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+4
+[fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+
+element
+(Person(Alex), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Person(Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+2
+[Start, Start]
+
+element
+(Married(Alex), have_an_affair(Alex, Diana))
+
+element[0]
+Married(Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+return
+Married(Alex) have_an_affair(Alex, Diana) [Start]
+find_open_precondition
+element
+(Person(Alex), have_an_affair(Alex, Diana))
+
+element[0]
+Person(Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+element
+(Love(Diana, Alex), have_an_affair(Alex, Diana))
+
+element[0]
+Love(Diana, Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+4
+[fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+
+element
+(Love(Alex, Diana), have_an_affair(Alex, Diana))
+
+element[0]
+Love(Alex, Diana)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+4
+[fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+
+element
+(Person(Alex), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Person(Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+2
+[Start, Start]
+
+return
+Person(Alex) have_an_affair(Alex, Diana) [Start, Start]
+find_open_precondition
+element
+(Love(Diana, Alex), have_an_affair(Alex, Diana))
+
+element[0]
+Love(Diana, Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+4
+[fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+
+element
+(Love(Alex, Diana), have_an_affair(Alex, Diana))
+
+element[0]
+Love(Alex, Diana)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+4
+[fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+
+element
+(Person(Alex), want_to_reveal_affair_to(Alex, Diana, Ann))
+
+element[0]
+Person(Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+return
+Person(Alex) want_to_reveal_affair_to(Alex, Diana, Ann) [Start]
+find_open_precondition
+element
+(Love(Diana, Alex), have_an_affair(Alex, Diana))
+
+element[0]
+Love(Diana, Alex)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+4
+[fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+
+element
+(Love(Alex, Diana), have_an_affair(Alex, Diana))
+
+element[0]
+Love(Alex, Diana)
+
+possible_actions
+[want_to_reveal_affair_to(Alex, Diana, Ann), Start, have_an_affair(Alex, Diana), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+4
+[fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+
+return
+Love(Diana, Alex) have_an_affair(Alex, Diana) [fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+find_open_precondition
+element
+(Location(Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+Location(Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(Person(Alex), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+Person(Alex)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+element
+(WorkAt(Diana, Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+WorkAt(Diana, Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(WorkAt(Alex, Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+WorkAt(Alex, Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(Love(Alex, Diana), have_an_affair(Alex, Diana))
+
+element[0]
+Love(Alex, Diana)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+5
+[fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+
+element
+(Person(Diana), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+Person(Diana)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+return
+Person(Alex) fall_in_love(Diana, Alex, Ann) [Start]
+find_open_precondition
+element
+(Location(Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+Location(Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(WorkAt(Diana, Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+WorkAt(Diana, Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(WorkAt(Alex, Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+WorkAt(Alex, Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(Love(Alex, Diana), have_an_affair(Alex, Diana))
+
+element[0]
+Love(Alex, Diana)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+5
+[fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+
+element
+(Person(Diana), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+Person(Diana)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+return
+Person(Diana) fall_in_love(Diana, Alex, Ann) [Start]
+find_open_precondition
+element
+(Location(Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+Location(Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(WorkAt(Diana, Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+WorkAt(Diana, Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(WorkAt(Alex, Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+WorkAt(Alex, Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(Love(Alex, Diana), have_an_affair(Alex, Diana))
+
+element[0]
+Love(Alex, Diana)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+5
+[fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+
+return
+Love(Alex, Diana) have_an_affair(Alex, Diana) [fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School)]
+find_open_precondition
+element
+(Location(Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+Location(Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(Person(Alex), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+Person(Alex)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+element
+(WorkAt(Diana, Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+WorkAt(Diana, Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(WorkAt(Alex, Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+WorkAt(Alex, Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(Person(Diana), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+Person(Diana)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+return
+Person(Alex) fall_in_love(Diana, Alex, Ann) [Start]
+find_open_precondition
+element
+(Location(Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+Location(Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(WorkAt(Diana, Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+WorkAt(Diana, Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(WorkAt(Alex, Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+WorkAt(Alex, Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(Person(Diana), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+Person(Diana)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+1
+[Start]
+
+return
+Person(Diana) fall_in_love(Diana, Alex, Ann) [Start]
+find_open_precondition
+element
+(Location(Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+Location(Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(WorkAt(Diana, Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+WorkAt(Diana, Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+element
+(WorkAt(Alex, Ann), fall_in_love(Diana, Alex, Ann))
+
+element[0]
+WorkAt(Alex, Ann)
+
+possible_actions
+[have_an_affair(Alex, Diana), Start, fall_in_love(Diana, Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann), Finish, have_an_affair(Ann, Diana), have_an_affair(Ann, School), have_an_affair(Ann, Alex), have_an_affair(Diana, Ann), have_an_affair(Diana, School), have_an_affair(Diana, Alex), have_an_affair(School, Ann), have_an_affair(School, Diana), have_an_affair(School, Alex), have_an_affair(Alex, Ann), have_an_affair(Alex, Diana), have_an_affair(Alex, School), fall_in_love(Ann, Diana, School), fall_in_love(Ann, Diana, Alex), fall_in_love(Ann, School, Diana), fall_in_love(Ann, School, Alex), fall_in_love(Ann, Alex, Diana), fall_in_love(Ann, Alex, School), fall_in_love(Diana, Ann, School), fall_in_love(Diana, Ann, Alex), fall_in_love(Diana, School, Ann), fall_in_love(Diana, School, Alex), fall_in_love(Diana, Alex, Ann), fall_in_love(Diana, Alex, School), fall_in_love(School, Ann, Diana), fall_in_love(School, Ann, Alex), fall_in_love(School, Diana, Ann), fall_in_love(School, Diana, Alex), fall_in_love(School, Alex, Ann), fall_in_love(School, Alex, Diana), fall_in_love(Alex, Ann, Diana), fall_in_love(Alex, Ann, School), fall_in_love(Alex, Diana, Ann), fall_in_love(Alex, Diana, School), fall_in_love(Alex, School, Ann), fall_in_love(Alex, School, Diana), want_to_reveal_affair_to(Ann, Diana, School), want_to_reveal_affair_to(Ann, Diana, Alex), want_to_reveal_affair_to(Ann, School, Diana), want_to_reveal_affair_to(Ann, School, Alex), want_to_reveal_affair_to(Ann, Alex, Diana), want_to_reveal_affair_to(Ann, Alex, School), want_to_reveal_affair_to(Diana, Ann, School), want_to_reveal_affair_to(Diana, Ann, Alex), want_to_reveal_affair_to(Diana, School, Ann), want_to_reveal_affair_to(Diana, School, Alex), want_to_reveal_affair_to(Diana, Alex, Ann), want_to_reveal_affair_to(Diana, Alex, School), want_to_reveal_affair_to(School, Ann, Diana), want_to_reveal_affair_to(School, Ann, Alex), want_to_reveal_affair_to(School, Diana, Ann), want_to_reveal_affair_to(School, Diana, Alex), want_to_reveal_affair_to(School, Alex, Ann), want_to_reveal_affair_to(School, Alex, Diana), want_to_reveal_affair_to(Alex, Ann, Diana), want_to_reveal_affair_to(Alex, Ann, School), want_to_reveal_affair_to(Alex, Diana, Ann), want_to_reveal_affair_to(Alex, Diana, School), want_to_reveal_affair_to(Alex, School, Ann), want_to_reveal_affair_to(Alex, School, Diana)]
+
+actions_for_precondition
+000000000
+Probably Wrong
+Causal Links
+(want_to_reveal_affair_to(Alex, Diana, Ann), plan_to_kill(Alex, Diana), Finish)
+(Start, MarryWith(Alex, Ann), want_to_reveal_affair_to(Alex, Diana, Ann))
+(Start, Person(Ann), want_to_reveal_affair_to(Alex, Diana, Ann))
+(Start, Person(Diana), want_to_reveal_affair_to(Alex, Diana, Ann))
+(have_an_affair(Alex, Diana), Affair(Alex, Diana), want_to_reveal_affair_to(Alex, Diana, Ann))
+(Start, Person(Diana), have_an_affair(Alex, Diana))
+(Start, Married(Alex), have_an_affair(Alex, Diana))
+(Start, Person(Alex), have_an_affair(Alex, Diana))
+(Start, Person(Alex), want_to_reveal_affair_to(Alex, Diana, Ann))
+(fall_in_love(Diana, Alex, Ann), Love(Diana, Alex), have_an_affair(Alex, Diana))
+(Start, Person(Alex), fall_in_love(Diana, Alex, Ann))
+(Start, Person(Diana), fall_in_love(Diana, Alex, Ann))
+(fall_in_love(Diana, Alex, Ann), Love(Alex, Diana), have_an_affair(Alex, Diana))
+
+Constraints
+Start < Finish
+fall_in_love(Diana, Alex, Ann) < have_an_affair(Alex, Diana)
+want_to_reveal_affair_to(Alex, Diana, Ann) < Finish
+have_an_affair(Alex, Diana) < want_to_reveal_affair_to(Alex, Diana, Ann)
+Start < want_to_reveal_affair_to(Alex, Diana, Ann)
+Start < have_an_affair(Alex, Diana)
+Start < fall_in_love(Diana, Alex, Ann)
+
+Partial Order Plan
+[{Start}, {fall_in_love(Diana, Alex, Ann)}, {have_an_affair(Alex, Diana)}, {want_to_reveal_affair_to(Alex, Diana, Ann)}, {Finish}]

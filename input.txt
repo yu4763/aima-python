@@ -1,0 +1,7 @@
+expand_actions inside
+name: None
+had_domain: True
+domain-action: win(p)
+domain Person(p) & Object(elected)
+precond [Want(p, elected), Person(p), Object(elected)]
+((Person(p) & Object(elected)) ==> win(p))
