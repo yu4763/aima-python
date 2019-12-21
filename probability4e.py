@@ -1,12 +1,13 @@
-"""Probability models.
-"""
+"""Probability models (Chapter 12-13)"""
 
-from utils import product, argmax, isclose, probability, extend
-from math import sqrt, pi, exp
 import copy
 import random
 from collections import defaultdict
 from functools import reduce
+
+import numpy as np
+
+from utils4e import product, probability, extend
 
 
 # ______________________________________________________________________________
@@ -19,7 +20,7 @@ def DTAgentProgram(belief_state):
 
     def program(percept):
         belief_state.observe(program.action, percept)
-        program.action = argmax(belief_state.actions(), key=belief_state.expected_outcome_utility)
+        program.action = max(belief_state.actions(), key=belief_state.expected_outcome_utility)
         return program.action
 
     program.action = None
@@ -69,7 +70,7 @@ class ProbDist:
         Returns the normalized distribution.
         Raises a ZeroDivisionError if the sum of the values is 0."""
         total = sum(self.prob.values())
-        if not isclose(total, 1.0):
+        if not np.isclose(total, 1.0):
             for val in self.prob:
                 self.prob[val] /= total
         return self
@@ -108,7 +109,7 @@ class JointProbDist(ProbDist):
         return ProbDist.__getitem__(self, values)
 
     def __setitem__(self, values, p):
-        """Set P(values) = p.  Values can be a tuple or a dict; it must
+        """Set P(values) = p. Values can be a tuple or a dict; it must
         have a value for each of the variables in the joint. Also keep track
         of the values we have seen so far for each variable."""
         values = event_values(values, self.variables)
@@ -385,7 +386,7 @@ def gaussian_probability(param, event, value):
     for k, v in event.items():
         # buffer varianle to calculate h1*a_h1 + h2*a_h2
         buff += param['a'][k] * v
-    res = 1 / (param['sigma'] * sqrt(2 * pi)) * exp(-0.5 * ((value - buff - param['b']) / param['sigma']) ** 2)
+    res = 1 / (param['sigma'] * np.sqrt(2 * np.pi)) * np.exp(-0.5 * ((value - buff - param['b']) / param['sigma']) ** 2)
     return res
 
 
@@ -403,7 +404,7 @@ def logistic_probability(param, event, value):
         # buffer variable to calculate (value-mu)/sigma
 
         buff *= (v - param['mu']) / param['sigma']
-    p = 1 - 1 / (1 + exp(-4 / sqrt(2 * pi) * buff))
+    p = 1 - 1 / (1 + np.exp(-4 / np.sqrt(2 * np.pi) * buff))
     return p if value else 1 - p
 
 
@@ -456,8 +457,7 @@ harvest_buy = BayesNet([
     ('Cost', 'Subsidy', 'Harvest',
      {True: {'sigma': 0.5, 'b': 1, 'a': {'Harvest': 0.5}},
       False: {'sigma': 0.6, 'b': 1, 'a': {'Harvest': 0.5}}}, 'c'),
-    ('Buys', '', 'Cost', {T: {'mu': 0.5, 'sigma': 0.5}, F: {'mu': 0.6, 'sigma': 0.6}}, 'd'),
-])
+    ('Buys', '', 'Cost', {T: {'mu': 0.5, 'sigma': 0.5}, F: {'mu': 0.6, 'sigma': 0.6}}, 'd')])
 
 
 # ______________________________________________________________________________
@@ -629,8 +629,9 @@ def prior_sample(bn):
 
 def rejection_sampling(X, e, bn, N=10000):
     """
+    [Figure 13.16]
     Estimate the probability distribution of variable X given
-    evidence e in BayesNet bn, using N samples.  [Figure 13.16]
+    evidence e in BayesNet bn, using N samples.
     Raises a ZeroDivisionError if all the N samples are rejected,
     i.e., inconsistent with e.
     >>> random.seed(47)
@@ -657,8 +658,9 @@ def consistent_with(event, evidence):
 
 def likelihood_weighting(X, e, bn, N=10000):
     """
+    [Figure 13.17]
     Estimate the probability distribution of variable X given
-    evidence e in BayesNet bn.  [Figure 13.17]
+    evidence e in BayesNet bn.
     >>> random.seed(1017)
     >>> likelihood_weighting('Burglary', dict(JohnCalls=T, MaryCalls=T),
     ...   burglary, 10000).show_approx()

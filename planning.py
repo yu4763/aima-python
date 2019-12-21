@@ -1,14 +1,15 @@
-"""Planning (Chapters 10-11)
-"""
+"""Planning (Chapters 10-11)"""
 
 import copy
 import itertools
 from collections import deque, defaultdict
 from functools import reduce as _reduce
 
+import numpy as np
+
 import search
-from csp import sat_up, NaryCSP, Constraint, ac_search_solver, is_
-from logic import FolKB, conjuncts, unify, associate, SAT_plan, cdcl_satisfiable
+from csp import sat_up, NaryCSP, Constraint, ac_search_solver, is_constraint
+from logic import FolKB, conjuncts, unify_mm, associate, SAT_plan, cdcl_satisfiable
 from search import Node
 from utils import Expr, expr, first
 
@@ -103,7 +104,7 @@ class PlanningProblem:
 
         for action in action_list:
             for permutation in itertools.permutations(objects, len(action.args)):
-                bindings = unify(Expr(action.name, *action.args), Expr(action.name, *permutation))
+                bindings = unify_mm(Expr(action.name, *action.args), Expr(action.name, *permutation))
                 if bindings is not None:
                     new_args = []
                     for arg in action.args:
@@ -317,7 +318,8 @@ def air_cargo():
 
 
 def spare_tire():
-    """[Figure 10.2] SPARE-TIRE-PROBLEM
+    """
+    [Figure 10.2] SPARE-TIRE-PROBLEM
 
     A problem involving changing the flat tire of a car
     with a spare tire from the trunk.
@@ -561,7 +563,8 @@ def double_tennis_problem():
 
 class ForwardPlan(search.Problem):
     """
-    Forward state-space search [Section 10.2.1]
+    [Section 10.2.1]
+    Forward state-space search
     """
 
     def __init__(self, planning_problem):
@@ -581,7 +584,7 @@ class ForwardPlan(search.Problem):
     def h(self, state):
         """
         Computes ignore delete lists heuristic by creating a relaxed version of the original problem (we can do that
-        by removing the delete lists from all actions, ie. removing all negative literals from effects) that will be
+        by removing the delete lists from all actions, i.e. removing all negative literals from effects) that will be
         easier to solve through GraphPlan and where the length of the solution will serve as a good heuristic.
         """
         relaxed_planning_problem = PlanningProblem(initial=state.state,
@@ -591,12 +594,13 @@ class ForwardPlan(search.Problem):
         try:
             return len(linearize(GraphPlan(relaxed_planning_problem).execute()))
         except:
-            return float('inf')
+            return np.inf
 
 
 class BackwardPlan(search.Problem):
     """
-    Backward relevant-states search [Section 10.2.2]
+    [Section 10.2.2]
+    Backward relevant-states search
     """
 
     def __init__(self, planning_problem):
@@ -606,7 +610,7 @@ class BackwardPlan(search.Problem):
 
     def actions(self, subgoal):
         """
-        Returns True if the action is relevant to the subgoal, ie.:
+        Returns True if the action is relevant to the subgoal, i.e.:
         - the action achieves an element of the effects
         - the action doesn't delete something that needs to be achieved
         - the preconditions are consistent with other subgoals that need to be achieved
@@ -633,7 +637,7 @@ class BackwardPlan(search.Problem):
     def h(self, subgoal):
         """
         Computes ignore delete lists heuristic by creating a relaxed version of the original problem (we can do that
-        by removing the delete lists from all actions, ie. removing all negative literals from effects) that will be
+        by removing the delete lists from all actions, i.e. removing all negative literals from effects) that will be
         easier to solve through GraphPlan and where the length of the solution will serve as a good heuristic.
         """
         relaxed_planning_problem = PlanningProblem(initial=self.goal,
@@ -643,12 +647,13 @@ class BackwardPlan(search.Problem):
         try:
             return len(linearize(GraphPlan(relaxed_planning_problem).execute()))
         except:
-            return float('inf')
+            return np.inf
 
 
 def CSPlan(planning_problem, solution_length, CSP_solver=ac_search_solver, arc_heuristic=sat_up):
     """
-        Planning as Constraint Satisfaction Problem [Section 10.4.3]
+    [Section 10.4.3]
+    Planning as Constraint Satisfaction Problem
     """
 
     def st(var, stage):
@@ -680,15 +685,15 @@ def CSPlan(planning_problem, solution_length, CSP_solver=ac_search_solver, arc_h
         domains = {av: list(map(lambda action: expr(str(action)), expanded_actions)) for av in act_vars}
         domains.update({st(var, stage): {True, False} for var in fluent_values for stage in range(horizon + 2)})
         # initial state constraints
-        constraints = [Constraint((st(var, 0),), is_(val))
+        constraints = [Constraint((st(var, 0),), is_constraint(val))
                        for (var, val) in {expr(str(fluent).replace('Not', '')):
                                               True if fluent.op[:3] != 'Not' else False
                                           for fluent in planning_problem.initial}.items()]
-        constraints += [Constraint((st(var, 0),), is_(False))
+        constraints += [Constraint((st(var, 0),), is_constraint(False))
                         for var in {expr(str(fluent).replace('Not', ''))
                                     for fluent in fluent_values if fluent not in planning_problem.initial}]
         # goal state constraints
-        constraints += [Constraint((st(var, horizon + 1),), is_(val))
+        constraints += [Constraint((st(var, horizon + 1),), is_constraint(val))
                         for (var, val) in {expr(str(fluent).replace('Not', '')):
                                                True if fluent.op[:3] != 'Not' else False
                                            for fluent in planning_problem.goals}.items()]
@@ -721,7 +726,8 @@ def CSPlan(planning_problem, solution_length, CSP_solver=ac_search_solver, arc_h
 
 def SATPlan(planning_problem, solution_length, SAT_solver=cdcl_satisfiable):
     """
-    Planning as Boolean satisfiability [Section 10.4.1]
+    [Section 10.4.1]
+    Planning as Boolean satisfiability
     """
 
     def expand_transitions(state, actions):
@@ -1042,8 +1048,8 @@ class Linearize:
     def execute(self):
         """Finds total-order solution for a planning graph"""
 
-        graphplan_solution = GraphPlan(self.planning_problem).execute()
-        filtered_solution = self.filter(graphplan_solution)
+        graphPlan_solution = GraphPlan(self.planning_problem).execute()
+        filtered_solution = self.filter(graphPlan_solution)
         ordered_solution = []
         planning_problem = self.planning_problem
         for level in filtered_solution:
@@ -1155,7 +1161,7 @@ class PartialOrderPlanner:
         for action in self.planning_problem.actions:
             for effect in action.effect:
                 if effect.op == oprec.op:
-                    bindings = unify(effect, oprec)
+                    bindings = unify_mm(effect, oprec)
                     if bindings is None:
                         break
                     return action, bindings
@@ -1297,7 +1303,9 @@ class PartialOrderPlanner:
             if not ordered:
                 break
             yield ordered
-            graph = {element: (dependency - ordered) for element, dependency in graph.items() if element not in ordered}
+            graph = {element: (dependency - ordered)
+                     for element, dependency in graph.items()
+                     if element not in ordered}
         if len(graph) != 0:
             raise ValueError('The graph is not acyclic and cannot be linearly ordered')
 
@@ -1415,8 +1423,7 @@ class HLA(Action):
     """
     unique_group = 1
 
-    def __init__(self, action, precond=None, effect=None, duration=0,
-                 consume=None, use=None):
+    def __init__(self, action, precond=None, effect=None, duration=0, consume=None, use=None):
         """
         As opposed to actions, to define HLA, we have added constraints.
         duration holds the amount of time required to execute the task
@@ -1438,7 +1445,6 @@ class HLA(Action):
         An HLA based version of act - along with knowledge base updation, it handles
         resource checks, and ensures the actions are executed in the correct order.
         """
-        # print(self.name)
         if not self.has_usable_resource(available_resources):
             raise Exception('Not enough usable resources to execute {}'.format(self.name))
         if not self.has_consumable_resource(available_resources):
@@ -1518,10 +1524,10 @@ class RealWorldPlanningProblem(PlanningProblem):
             raise Exception("Action '{}' not found".format(action.name))
         self.initial = list_action.do_action(self.jobs, self.resources, self.initial, args).clauses
 
-    def refinements(hla, library):  # refinements may be (multiple) HLA themselves ...
+    def refinements(self, library):  # refinements may be (multiple) HLA themselves ...
         """
-        state is a Problem, containing the current state kb
-        library is a dictionary containing details for every possible refinement. eg:
+        State is a Problem, containing the current state kb library is a
+        dictionary containing details for every possible refinement. e.g.:
         {
         'HLA': [
             'Go(Home, SFO)',
@@ -1551,10 +1557,9 @@ class RealWorldPlanningProblem(PlanningProblem):
             ['At(SFOLongTermParking) & ~At(Home)'],
             ['At(SFO) & ~At(SFOLongTermParking)'],
             ['At(SFO) & ~At(Home)']
-            ]
-        }
+            ]}
         """
-        indices = [i for i, x in enumerate(library['HLA']) if expr(x).op == hla.name]
+        indices = [i for i, x in enumerate(library['HLA']) if expr(x).op == self.name]
         for i in indices:
             actions = []
             for j in range(len(library['steps'][i])):
@@ -1565,14 +1570,15 @@ class RealWorldPlanningProblem(PlanningProblem):
                 actions.append(HLA(library['steps'][i][j], precond, effect))
             yield actions
 
-    def hierarchical_search(problem, hierarchy):
+    def hierarchical_search(self, hierarchy):
         """
-        [Figure 11.5] 'Hierarchical Search, a Breadth First Search implementation of Hierarchical
+        [Figure 11.5]
+        'Hierarchical Search, a Breadth First Search implementation of Hierarchical
         Forward Planning Search'
         The problem is a real-world problem defined by the problem class, and the hierarchy is
         a dictionary of HLA - refinements (see refinements generator for details)
         """
-        act = Node(problem.initial, None, [problem.actions[0]])
+        act = Node(self.initial, None, [self.actions[0]])
         frontier = deque()
         frontier.append(act)
         while True:
@@ -1582,8 +1588,8 @@ class RealWorldPlanningProblem(PlanningProblem):
             # finds the first non primitive hla in plan actions
             (hla, index) = RealWorldPlanningProblem.find_hla(plan, hierarchy)
             prefix = plan.action[:index]
-            outcome = RealWorldPlanningProblem(RealWorldPlanningProblem.result(problem.initial, prefix), problem.goals,
-                                               problem.actions)
+            outcome = RealWorldPlanningProblem(
+                RealWorldPlanningProblem.result(self.initial, prefix), self.goals, self.actions)
             suffix = plan.action[index + 1:]
             if not hla:  # hla is None and plan is primitive
                 if outcome.goal_test():
@@ -1599,52 +1605,54 @@ class RealWorldPlanningProblem(PlanningProblem):
                 state = a(state, a.args).clauses
         return state
 
-    def angelic_search(problem, hierarchy, initialPlan):
+    def angelic_search(self, hierarchy, initial_plan):
         """
-        [Figure 11.8] A hierarchical planning algorithm that uses angelic semantics to identify and
+        [Figure 11.8]
+        A hierarchical planning algorithm that uses angelic semantics to identify and
         commit to high-level plans that work while avoiding high-level plans that don’t.
         The predicate MAKING-PROGRESS checks to make sure that we aren’t stuck in an infinite regression
         of refinements.
-        At top level, call ANGELIC-SEARCH with [Act ] as the initialPlan.
+        At top level, call ANGELIC-SEARCH with [Act] as the initialPlan.
 
         InitialPlan contains a sequence of HLA's with angelic semantics
 
-        The possible effects of an angelic HLA in initialPlan are :
+        The possible effects of an angelic HLA in initialPlan are:
         ~ : effect remove
         $+: effect possibly add
         $-: effect possibly remove
         $$: possibly add or remove
         """
-        frontier = deque(initialPlan)
+        frontier = deque(initial_plan)
         while True:
             if not frontier:
                 return None
             plan = frontier.popleft()  # sequence of HLA/Angelic HLA's
-            opt_reachable_set = RealWorldPlanningProblem.reach_opt(problem.initial, plan)
-            pes_reachable_set = RealWorldPlanningProblem.reach_pes(problem.initial, plan)
-            if problem.intersects_goal(opt_reachable_set):
+            opt_reachable_set = RealWorldPlanningProblem.reach_opt(self.initial, plan)
+            pes_reachable_set = RealWorldPlanningProblem.reach_pes(self.initial, plan)
+            if self.intersects_goal(opt_reachable_set):
                 if RealWorldPlanningProblem.is_primitive(plan, hierarchy):
                     return [x for x in plan.action]
-                guaranteed = problem.intersects_goal(pes_reachable_set)
-                if guaranteed and RealWorldPlanningProblem.making_progress(plan, initialPlan):
+                guaranteed = self.intersects_goal(pes_reachable_set)
+                if guaranteed and RealWorldPlanningProblem.making_progress(plan, initial_plan):
                     final_state = guaranteed[0]  # any element of guaranteed
                     return RealWorldPlanningProblem.decompose(hierarchy, final_state, pes_reachable_set)
-                # there should be at least one HLA/Angelic_HLA, otherwise plan would be primitive
+                # there should be at least one HLA/AngelicHLA, otherwise plan would be primitive
                 hla, index = RealWorldPlanningProblem.find_hla(plan, hierarchy)
                 prefix = plan.action[:index]
                 suffix = plan.action[index + 1:]
-                outcome = RealWorldPlanningProblem(RealWorldPlanningProblem.result(problem.initial, prefix),
-                                                   problem.goals, problem.actions)
+                outcome = RealWorldPlanningProblem(
+                    RealWorldPlanningProblem.result(self.initial, prefix), self.goals, self.actions)
                 for sequence in RealWorldPlanningProblem.refinements(hla, hierarchy):  # find refinements
                     frontier.append(
                         AngelicNode(outcome.initial, plan, prefix + sequence + suffix, prefix + sequence + suffix))
 
-    def intersects_goal(problem, reachable_set):
+    def intersects_goal(self, reachable_set):
         """
         Find the intersection of the reachable states and the goal
         """
-        return [y for x in list(reachable_set.keys()) for y in reachable_set[x] if
-                all(goal in y for goal in problem.goals)]
+        return [y for x in list(reachable_set.keys())
+                for y in reachable_set[x]
+                if all(goal in y for goal in self.goals)]
 
     def is_primitive(plan, library):
         """
@@ -1707,7 +1715,7 @@ class RealWorldPlanningProblem(PlanningProblem):
                 break
         return hla, index
 
-    def making_progress(plan, initialPlan):
+    def making_progress(plan, initial_plan):
         """
         Prevents from infinite regression of refinements
 
@@ -1715,8 +1723,8 @@ class RealWorldPlanningProblem(PlanningProblem):
         its pessimistic reachable set intersects the goal inside a call to decompose on
         the same plan, in the same circumstances)
         """
-        for i in range(len(initialPlan)):
-            if plan == initialPlan[i]:
+        for i in range(len(initial_plan)):
+            if plan == initial_plan[i]:
                 return False
         return True
 
@@ -1747,8 +1755,8 @@ class RealWorldPlanningProblem(PlanningProblem):
         """
         s_i = reachable_set[i - 1][0]
         for state in reachable_set[i - 1]:
-            if s_f in [x for x in
-                       RealWorldPlanningProblem.reach_pes(state, AngelicNode(state, None, [action], [action]))[1]]:
+            if s_f in [x for x in RealWorldPlanningProblem.reach_pes(
+                    state, AngelicNode(state, None, [action], [action]))[1]]:
                 s_i = state
                 break
         return s_i
@@ -1843,9 +1851,7 @@ def go_to_sfo():
             ['At(SFO) & ~At(Home)'],
             ['At(SFOLongTermParking) & ~At(Home)'],
             ['At(SFO) & ~At(SFOLongTermParking)'],
-            ['At(SFO) & ~At(Home)']
-        ]
-    }
+            ['At(SFO) & ~At(Home)']]}
 
     return RealWorldPlanningProblem(initial='At(Home)', goals='At(SFO)', actions=actions), library
 
@@ -1960,7 +1966,6 @@ class AngelicHLA(HLA):
                         effects[i] = expr(clause.op[w:])  # make changes in the ith part of effects
                         if n == 3:
                             effects[i + len(effects) // 3] = expr(clause.op[6:])
-            # print('effects',  effects)
 
         return [HLA(Expr(self.name, self.args), self.precond, effects[i]) for i in range(len(effects))]
 

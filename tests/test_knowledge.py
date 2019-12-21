@@ -33,9 +33,8 @@ conductance = [
 
 
 def r_example(Alt, Bar, Fri, Hun, Pat, Price, Rain, Res, Type, Est, GOAL):
-    return {'Alt': Alt, 'Bar': Bar, 'Fri': Fri, 'Hun': Hun, 'Pat': Pat,
-            'Price': Price, 'Rain': Rain, 'Res': Res, 'Type': Type, 'Est': Est,
-            'GOAL': GOAL}
+    return {'Alt': Alt, 'Bar': Bar, 'Fri': Fri, 'Hun': Hun, 'Pat': Pat, 'Price': Price,
+            'Rain': Rain, 'Res': Res, 'Type': Type, 'Est': Est, 'GOAL': GOAL}
 
 
 restaurant = [
@@ -103,38 +102,38 @@ def test_minimal_consistent_det():
 A, B, C, D, E, F, G, H, I, x, y, z = map(expr, 'ABCDEFGHIxyz')
 
 # knowledge base containing family relations
-small_family = FOIL_container([expr("Mother(Anne, Peter)"),
-                               expr("Mother(Anne, Zara)"),
-                               expr("Mother(Sarah, Beatrice)"),
-                               expr("Mother(Sarah, Eugenie)"),
-                               expr("Father(Mark, Peter)"),
-                               expr("Father(Mark, Zara)"),
-                               expr("Father(Andrew, Beatrice)"),
-                               expr("Father(Andrew, Eugenie)"),
-                               expr("Father(Philip, Anne)"),
-                               expr("Father(Philip, Andrew)"),
-                               expr("Mother(Elizabeth, Anne)"),
-                               expr("Mother(Elizabeth, Andrew)"),
-                               expr("Male(Philip)"),
-                               expr("Male(Mark)"),
-                               expr("Male(Andrew)"),
-                               expr("Male(Peter)"),
-                               expr("Female(Elizabeth)"),
-                               expr("Female(Anne)"),
-                               expr("Female(Sarah)"),
-                               expr("Female(Zara)"),
-                               expr("Female(Beatrice)"),
-                               expr("Female(Eugenie)")])
+small_family = FOILContainer([expr("Mother(Anne, Peter)"),
+                              expr("Mother(Anne, Zara)"),
+                              expr("Mother(Sarah, Beatrice)"),
+                              expr("Mother(Sarah, Eugenie)"),
+                              expr("Father(Mark, Peter)"),
+                              expr("Father(Mark, Zara)"),
+                              expr("Father(Andrew, Beatrice)"),
+                              expr("Father(Andrew, Eugenie)"),
+                              expr("Father(Philip, Anne)"),
+                              expr("Father(Philip, Andrew)"),
+                              expr("Mother(Elizabeth, Anne)"),
+                              expr("Mother(Elizabeth, Andrew)"),
+                              expr("Male(Philip)"),
+                              expr("Male(Mark)"),
+                              expr("Male(Andrew)"),
+                              expr("Male(Peter)"),
+                              expr("Female(Elizabeth)"),
+                              expr("Female(Anne)"),
+                              expr("Female(Sarah)"),
+                              expr("Female(Zara)"),
+                              expr("Female(Beatrice)"),
+                              expr("Female(Eugenie)")])
 
-smaller_family = FOIL_container([expr("Mother(Anne, Peter)"),
-                                 expr("Father(Mark, Peter)"),
-                                 expr("Father(Philip, Anne)"),
-                                 expr("Mother(Elizabeth, Anne)"),
-                                 expr("Male(Philip)"),
-                                 expr("Male(Mark)"),
-                                 expr("Male(Peter)"),
-                                 expr("Female(Elizabeth)"),
-                                 expr("Female(Anne)")])
+smaller_family = FOILContainer([expr("Mother(Anne, Peter)"),
+                                expr("Father(Mark, Peter)"),
+                                expr("Father(Philip, Anne)"),
+                                expr("Mother(Elizabeth, Anne)"),
+                                expr("Male(Philip)"),
+                                expr("Male(Mark)"),
+                                expr("Male(Peter)"),
+                                expr("Female(Elizabeth)"),
+                                expr("Female(Anne)")])
 
 # target relation
 target = expr('Parent(x, y)')

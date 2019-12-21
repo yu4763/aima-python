@@ -6,12 +6,12 @@ from utils import expr_handle_infix_ops, count
 random.seed("aima-python")
 
 definite_clauses_KB = PropDefiniteKB()
-for clause in ['(B & F)==>E',
-               '(A & E & F)==>G',
-               '(B & C)==>F',
-               '(A & B)==>D',
-               '(E & F)==>H',
-               '(H & I)==>J',
+for clause in ['(B & F) ==> E',
+               '(A & E & F) ==> G',
+               '(B & C) ==> F',
+               '(A & B) ==> D',
+               '(E & F) ==> H',
+               '(H & I) ==> J',
                'A', 'B', 'C']:
     definite_clauses_KB.tell(expr(clause))
 
@@ -47,8 +47,7 @@ def test_variables():
 def test_expr():
     assert repr(expr('P <=> Q(1)')) == '(P <=> Q(1))'
     assert repr(expr('P & Q | ~R(x, F(x))')) == '((P & Q) | ~R(x, F(x)))'
-    assert (expr_handle_infix_ops('P & Q ==> R & ~S')
-            == "P & Q |'==>'| R & ~S")
+    assert expr_handle_infix_ops('P & Q ==> R & ~S') == "P & Q |'==>'| R & ~S"
 
 
 def test_extend():
@@ -183,11 +182,26 @@ def test_unify():
     assert unify(expr('American(x) & Weapon(B)'), expr('American(A) & Weapon(y)')) == {x: A, y: B}
     assert unify(expr('P(F(x,z), G(u, z))'), expr('P(F(y,a), y)')) == {x: G(u, a), z: a, y: G(u, a)}
 
-    # test for https://github.com/aimacode/aima-python/issues/1053
+    # tests for https://github.com/aimacode/aima-python/issues/1053
     # unify(expr('P(A, x, F(G(y)))'), expr('P(z, F(z), F(u))')) 
     # must return {z: A, x: F(A), u: G(y)} and not {z: A, x: F(z), u: G(y)}
     assert unify(expr('P(A, x, F(G(y)))'), expr('P(z, F(z), F(u))')) == {z: A, x: F(A), u: G(y)}
     assert unify(expr('P(x, A, F(G(y)))'), expr('P(F(z), z, F(u))')) == {x: F(A), z: A, u: G(y)}
+
+
+def test_unify_mm():
+    assert unify_mm(x, x) == {}
+    assert unify_mm(x, 3) == {x: 3}
+    assert unify_mm(x & 4 & y, 6 & y & 4) == {x: 6, y: 4}
+    assert unify_mm(expr('A(x)'), expr('A(B)')) == {x: B}
+    assert unify_mm(expr('American(x) & Weapon(B)'), expr('American(A) & Weapon(y)')) == {x: A, y: B}
+    assert unify_mm(expr('P(F(x,z), G(u, z))'), expr('P(F(y,a), y)')) == {x: G(u, a), z: a, y: G(u, a)}
+
+    # tests for https://github.com/aimacode/aima-python/issues/1053
+    # unify(expr('P(A, x, F(G(y)))'), expr('P(z, F(z), F(u))'))
+    # must return {z: A, x: F(A), u: G(y)} and not {z: A, x: F(z), u: G(y)}
+    assert unify_mm(expr('P(A, x, F(G(y)))'), expr('P(z, F(z), F(u))')) == {z: A, x: F(A), u: G(y)}
+    assert unify_mm(expr('P(x, A, F(G(y)))'), expr('P(F(z), z, F(u))')) == {x: F(A), z: A, u: G(y)}
 
 
 def test_pl_fc_entails():
@@ -246,10 +260,8 @@ def test_dissociate():
 
 
 def test_associate():
-    assert (repr(associate('&', [(A & B), (B | C), (B & C)]))
-            == '(A & B & (B | C) & B & C)')
-    assert (repr(associate('|', [A | (B | (C | (A & B)))]))
-            == '(A | B | C | (A & B))')
+    assert repr(associate('&', [(A & B), (B | C), (B & C)])) == '(A & B & (B | C) & B & C)'
+    assert repr(associate('|', [A | (B | (C | (A & B)))])) == '(A | B | C | (A & B))'
 
 
 def test_move_not_inwards():
@@ -273,17 +285,17 @@ def test_distribute_and_over_or():
 
 
 def test_to_cnf():
-    assert (repr(to_cnf(wumpus_world_inference & ~expr('~P12'))) ==
-            '((~P12 | B11) & (~P21 | B11) & (P12 | P21 | ~B11) & ~B11 & P12)')
+    assert repr(to_cnf(wumpus_world_inference & ~expr('~P12'))) == \
+           '((~P12 | B11) & (~P21 | B11) & (P12 | P21 | ~B11) & ~B11 & P12)'
     assert repr(to_cnf((P & Q) | (~P & ~Q))) == '((~P | P) & (~Q | P) & (~P | Q) & (~Q | Q))'
     assert repr(to_cnf('A <=> B')) == '((A | ~B) & (B | ~A))'
-    assert repr(to_cnf("B <=> (P1 | P2)")) == '((~P1 | B) & (~P2 | B) & (P1 | P2 | ~B))'
+    assert repr(to_cnf('B <=> (P1 | P2)')) == '((~P1 | B) & (~P2 | B) & (P1 | P2 | ~B))'
     assert repr(to_cnf('A <=> (B & C)')) == '((A | ~B | ~C) & (B | ~A) & (C | ~A))'
-    assert repr(to_cnf("a | (b & c) | d")) == '((b | a | d) & (c | a | d))'
-    assert repr(to_cnf("A & (B | (D & E))")) == '(A & (D | B) & (E | B))'
-    assert repr(to_cnf("A | (B | (C | (D & E)))")) == '((D | A | B | C) & (E | A | B | C))'
-    assert repr(to_cnf(
-        '(A <=> ~B) ==> (C | ~D)')) == '((B | ~A | C | ~D) & (A | ~A | C | ~D) & (B | ~B | C | ~D) & (A | ~B | C | ~D))'
+    assert repr(to_cnf('a | (b & c) | d')) == '((b | a | d) & (c | a | d))'
+    assert repr(to_cnf('A & (B | (D & E))')) == '(A & (D | B) & (E | B))'
+    assert repr(to_cnf('A | (B | (C | (D & E)))')) == '((D | A | B | C) & (E | A | B | C))'
+    assert repr(to_cnf('(A <=> ~B) ==> (C | ~D)')) == \
+           '((B | ~A | C | ~D) & (A | ~A | C | ~D) & (B | ~B | C | ~D) & (A | ~B | C | ~D))'
 
 
 def test_pl_resolution():
@@ -299,18 +311,15 @@ def test_pl_resolution():
 def test_standardize_variables():
     e = expr('F(a, b, c) & G(c, A, 23)')
     assert len(variables(standardize_variables(e))) == 3
-    # assert variables(e).intersection(variables(standardize_variables(e))) == {}
     assert is_variable(standardize_variables(expr('x')))
 
 
 def test_fol_bc_ask():
     def test_ask(query, kb=None):
         q = expr(query)
-        test_variables = variables(q)
         answers = fol_bc_ask(kb or test_kb, q)
-        return sorted(
-            [dict((x, v) for x, v in list(a.items()) if x in test_variables)
-             for a in answers], key=repr)
+        return sorted([dict((x, v) for x, v in list(a.items()) if x in variables(q))
+                       for a in answers], key=repr)
 
     assert repr(test_ask('Farmer(x)')) == '[{x: Mac}]'
     assert repr(test_ask('Human(x)')) == '[{x: Mac}, {x: MrsMac}]'
@@ -321,11 +330,9 @@ def test_fol_bc_ask():
 def test_fol_fc_ask():
     def test_ask(query, kb=None):
         q = expr(query)
-        test_variables = variables(q)
         answers = fol_fc_ask(kb or test_kb, q)
-        return sorted(
-            [dict((x, v) for x, v in list(a.items()) if x in test_variables)
-             for a in answers], key=repr)
+        return sorted([dict((x, v) for x, v in list(a.items()) if x in variables(q))
+                       for a in answers], key=repr)
 
     assert repr(test_ask('Criminal(x)', crime_kb)) == '[{x: West}]'
     assert repr(test_ask('Enemy(x, America)', crime_kb)) == '[{x: Nono}]'
@@ -344,12 +351,12 @@ def test_WalkSAT():
         # Sometimes WalkSat may run out of flips before finding a solution
         if single_solution is None:
             single_solution = {}
-        soln = WalkSAT(clauses)
-        if soln:
-            assert all(pl_true(x, soln) for x in clauses)
+        sol = WalkSAT(clauses)
+        if sol:
+            assert all(pl_true(x, sol) for x in clauses)
             if single_solution:  # Cross check the solution if only one exists
                 assert all(pl_true(x, single_solution) for x in clauses)
-                assert soln == single_solution
+                assert sol == single_solution
 
     # Test WalkSat for problems with solution
     check_SAT([A & B, A & C])

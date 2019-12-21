@@ -40,7 +40,7 @@ def test_generate_edge_weight():
 
 def test_graph_bfs():
     graph = Graph(gray_scale_image)
-    assert graph.bfs((1, 1), (0, 0), []) == False
+    assert not graph.bfs((1, 1), (0, 0), [])
     parents = []
     assert graph.bfs((0, 0), (2, 2), parents)
     assert len(parents) == 8
@@ -75,9 +75,11 @@ def test_ROIPoolingLayer():
     feature_map = np.ones(feature_maps_shape, dtype='float32')
     feature_map[200 - 1, 100 - 3, 0] = 50
     roiss = np.asarray([[0.5, 0.2, 0.7, 0.4], [0.0, 0.0, 1.0, 1.0]])
-    assert pool_rois(feature_map, roiss, 3, 7)[0].tolist() == [[1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1],
+    assert pool_rois(feature_map, roiss, 3, 7)[0].tolist() == [[1, 1, 1, 1, 1, 1, 1],
+                                                               [1, 1, 1, 1, 1, 1, 1],
                                                                [1, 1, 1, 1, 1, 1, 1]]
-    assert pool_rois(feature_map, roiss, 3, 7)[1].tolist() == [[1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1],
+    assert pool_rois(feature_map, roiss, 3, 7)[1].tolist() == [[1, 1, 1, 1, 1, 1, 1],
+                                                               [1, 1, 1, 1, 1, 1, 1],
                                                                [1, 1, 1, 1, 1, 1, 50]]
 
 
